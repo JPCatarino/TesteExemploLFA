@@ -8,7 +8,11 @@ stat: print
       |assign
       ;
 
-print: 'print' printV;
+print: 'print' printO;
+
+printO: printV          #printVal
+        |op             #printOP
+        ;
 
 printV: string      #printS
         |ID         #printID

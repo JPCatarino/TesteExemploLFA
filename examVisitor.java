@@ -20,6 +20,16 @@ public class examVisitor extends examGrmrBaseVisitor<String>{
     @Override public String visitStat(examGrmrParser.StatContext ctx) {return visitChildren(ctx);}
     
     @Override public String visitPrint(examGrmrParser.PrintContext ctx) {
+        String res = visit(ctx.printO());
+        return res;
+    }
+
+    @Override public String visitPrintOP(examGrmrParser.PrintOPContext ctx) {
+        String res = visit(ctx.op());
+        return res;
+    }
+
+    @Override public String visitPrintVal(examGrmrParser.PrintValContext ctx) {
         String res = visit(ctx.printV());
         return res;
     }
