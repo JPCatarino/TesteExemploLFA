@@ -1,0 +1,6 @@
+kek : input("Nome: ")
+t2 : "ola"
+t3 : t2+" "+ kek
+t4 : (t3/"ola"/"adeus")
+print t3
+print t4
